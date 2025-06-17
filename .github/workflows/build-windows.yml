@@ -1,0 +1,29 @@
+name: Build Windows .exe
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+
+      - name: Install dependencies
+        run: cd electron-app && npm install
+
+      - name: Build .exe with electron-builder
+        run: cd electron-app && npm run dist
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ResumeAnalyzer-Windows
+          path: electron-app/release-build/*.exe

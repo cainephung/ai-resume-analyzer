@@ -1,0 +1,46 @@
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+*.so
+*.pyc
+__pycache__/
+
+# Virtual environments
+venv/
+env/
+*.env
+
+# Temp and cache files
+*.tmp
+*.temp
+*.log
+*.DS_Store
+.cache/
+.streamlit/
+.resume_cache/
+history.json
+
+# PDF reports and sample data
+resume_report.pdf
+*.pdf
+sample_resume.pdf
+
+# Local ML model files
+local_model/
+*.safetensors
+*.json
+
+# Build artifacts
+build/
+dist/
+*.spec
+
+# Electron app
+electron-app/node_modules/
+electron-app/release-build/
+
+# PyInstaller artifacts
+*.spec
+*.pkg
+*.toc
+*.pyz
+*.dmg
